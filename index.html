@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PREDICTORS MEDICINE EXPIRY TRACKER</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">✚</div>
+      <div>
+        <h1>PREDICTORS MEDICINE EXPIRY TRACKER</h1>
+        <div class="small-note">Be Alert From Expired Medicine </div>
+      </div>
+    </header>
+
+    <!-- LOGIN PAGE -->
+    <main id="page-login" class="card">
+      <div class="login-grid">
+        <section>
+          <h2>Customer Login</h2>
+          <p class="small-note">Login with name, mobile, email and place.</p>
+          <div class="login-form">
+            <input id="loginName" placeholder="Full name" autocomplete="name" />
+            <input id="loginMobile" placeholder="Mobile number" autocomplete="tel" />
+            <input id="loginEmail" placeholder="Email address" autocomplete="email" />
+            <input id="loginPlace" placeholder="Place / City" />
+            <div class="row">
+              <button id="btnLogin" class="btn">Login</button>
+              <button id="btnDemo1" class="btn ghost">Nikita</button>
+              <button id="btnDemo2" class="btn ghost">Prince</button>
+            </div>
+            <p id="loginMsg" class="small-note"></p>
+          </div>
+        </section>
+
+        <aside>
+          <h3>Why register?</h3>
+          <ul>
+            <li>Save medicines & expiry dates</li>
+            <li>Scan via camera (mobile friendly)</li>
+            <li>Nearby pharmacies & hospitals (Indore)</li>
+          </ul>
+
+          <h4>Preloaded accounts</h4>
+          <ul>
+            <li>Nikita — 6232298863 — nk.sta2005@gmail.com</li>
+            <li>Prince — 6232298863 — pm.sta2005@gmail.com</li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+
+    <!-- DASHBOARD -->
+    <section id="page-dashboard" style="display:none">
+      <div class="card top">
+        <div class="header-row">
+          <div>
+            <h2 id="welcome">Welcome</h2>
+            <div id="userPlace" class="small-note"></div>
+          </div>
+          <div class="top-actions">
+            <button id="logout" class="btn ghost">Logout</button>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="btn" id="navScan">🔎 Scan Medicine</button>
+          <button class="btn" id="navMyMed">💊 My Medicines</button>
+          <button class="btn" id="navPharma">🏪 Pharmacies</button>
+          <button class="btn" id="navHosp">🏥 Hospitals</button>
+          <button class="btn" id="navPres">📎 Prescriptions</button>
+        </nav>
+
+        <div id="contentArea">
+          <!-- SCAN -->
+          <div id="area-scan" class="area" style="display:none">
+            <div class="grid-2">
+              <div class="card">
+                <h3>Scan Medicine (Camera)</h3>
+                <video id="preview" class="video" playsinline></video>
+                <div class="row" style="margin-top:8px">
+                  <button id="startCamera" class="btn">Start Camera</button>
+                  <button id="stopCamera" class="btn ghost">Stop</button>
+                </div>
+                <div class="manual">
+                  <label class="small-note">Or enter barcode manually</label>
+                  <div class="row"><input id="manualBarcode" placeholder="Enter barcode"><button id="lookup" class="btn">Lookup</button></div>
+                  <p id="scanMsg" class="small-note"></p>
+                </div>
+              </div>
+
+              <div class="card">
+                <h3>Detected / Fill details</h3>
+                <input id="s_name" placeholder="Medicine name">
+                <div class="row">
+                  <input id="s_qty" type="number" placeholder="Quantity" value="1">
+                  <input id="s_price" type="number" placeholder="Price (₹)">
+                </div>
+                <input id="s_expiry" type="date" placeholder="Expiry date">
+                <input id="s_barcode" placeholder="Barcode">
+                <div class="row" style="margin-top:8px">
+                  <button id="saveMed" class="btn">Save to My Medicines</button>
+                  <button id="clearScan" class="btn ghost">Clear</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MY MEDS -->
+          <div id="area-mymed" class="area" style="display:none">
+            <h3>My Medicines</h3>
+            <div id="medList" class="list"></div>
+          </div>
+
+          <!-- PHARMACIES -->
+          <div id="area-pharma" class="area" style="display:none">
+            <h3>Pharmacies near Indore</h3>
+            <div id="pharmaList" class="list"></div>
+          </div>
+
+          <!-- HOSPITALS -->
+          <div id="area-hosp" class="area" style="display:none">
+            <h3>Hospitals near Indore</h3>
+            <div id="hospList" class="list"></div>
+          </div>
+
+          <!-- PRESCRIPTIONS -->
+          <div id="area-pres" class="area" style="display:none">
+            <h3>Upload Prescription</h3>
+            <input type="file" id="presFile" accept="image/*,application/pdf">
+            <div style="margin-top:8px"><button id="uploadPres" class="btn">Upload</button></div>
+            <h4 style="margin-top:12px">Uploaded</h4>
+            <div id="presList" class="list"></div>
+          <section id="customer-faq" class="card" style="margin-top:16px;">
+  <h3 style="color:#00bfff;">💡 Customer Safety Tips</h3>
+  <div class="faq-item">
+    <p class="question">Q1: How can I avoid consuming expired medicine?</p>
+    <p class="answer">A1: Always check the expiry date before use. Remove or separate medicines that are expired.</p>
+  </div>
+  <div class="faq-item">
+    <p class="question">Q2: How to properly store medicines?</p>
+    <p class="answer">A2: Keep medicines in a cool, dry place away from sunlight and moisture. Follow the storage instructions on the label.</p>
+  </div>
+  <div class="faq-item">
+    <p class="question">Q3: How can I track medicine expiry effectively?</p>
+    <p class="answer">A3: Use the “My Medicines” tracker in this website to monitor expiry dates. Enable reminders if possible.</p>
+  </div>
+  <div class="faq-item">
+    <p class="question">Q4: What should I do with expired medicines?</p>
+    <p class="answer">A4: Do not consume them. Dispose them according to local pharmacy guidelines or return to the store if they offer take-back services.</p>
+  </div>
+  <div class="faq-item">
+    <p class="question">Q5: How often should I check my medicine stock?</p>
+    <p class="answer">A5: Check at least once a month to ensure nothing is near expiry or expired.</p>
+  </div>
+            
+</section>
+</div>
+        </div>
+
+      </div>
+
+      <footer>
+        <div class="footer-row">© 2025 — PREDICTORS MEDICINE EXPIRY TRACKER — Feedback: 2025</div>
+      </footer>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
