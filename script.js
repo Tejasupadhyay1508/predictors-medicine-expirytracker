@@ -3,8 +3,8 @@
 
 // ----- Data -----
 const USERS = [
-  {name:'Nikita Dinkar', mobile:'6232298863', email:'nk.sta2005@gmail.com', place:'Rajendra Nagar'},
-  {name:'Prince Mishra', mobile:'6232298863', email:'pm.sta2005@gmail.com', place:'Satna'}
+  // {name:'Nikita Dinkar', mobile:'6232298863', email:'nk.sta2005@gmail.com', place:'Rajendra Nagar'},
+  // {name:'Prince Mishra', mobile:'6232298863', email:'pm.sta2005@gmail.com', place:'Satna'}
 ];
 
 const SAMPLE_MEDICINES = [
